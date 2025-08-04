@@ -260,6 +260,9 @@ p {
     margin-right: 24px;
     align-items: center;
 }
+.team-links-text{
+    padding: 32px 0 32px;
+}
 .team-links:last-child{
     margin-right: 0;
 }
@@ -282,9 +285,7 @@ p {
     margin-bottom: 8px;
 }
 
-.team-icon-container{
-    padding: 32px 0 32px;
-}
+
 
 .team-list-icon{
     display: flex;
