@@ -51,6 +51,9 @@ p {
 
 .header{
     border-bottom: 1px solid var(--color-cornflower);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-nav-address{
     display: flex;
@@ -141,10 +144,11 @@ p {
 .web-head-section{
     background-color: var(--color-navy_blue);
     padding: 188px 0;
-    background-image: linear-gradient(to top, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
     background-position: center;
-    background-size: 1440px 600px;
+    max-width: 1440px;
     background-repeat: no-repeat;
+    background-size: cover;
     margin: 0 auto;
 }
 .web-head-headline{
@@ -173,7 +177,7 @@ p {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     display: block;
     margin: 0 auto;
-    transition: backgroun-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: backgroun-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .web-head-button:hover,
 .web-head-button:focus{
@@ -206,6 +210,10 @@ p {
     border-radius: 4px;
     padding: 24px 100px;
     margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
 }
 
 .benefits-icon{
@@ -255,10 +263,7 @@ p {
 .team-links:last-child{
     margin-right: 0;
 }
-.team-links-text{
-    padding-top: 32px;
-    
-}
+
 .team-headlines{
     font-weight: 500;
     font-size: 20px;
@@ -285,14 +290,18 @@ p {
 .team-list-icon{
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 24px;
    
 }
 
-.team-link-icon{
+.team-item-icon{
     width: 40px;
     height: 40px;
+}
+
+.team-link-icon{
+    width: 100%;
+    height: 100%;
     background-color: var(--color-iris);
     border-radius: 50%;
     display: flex;
@@ -316,10 +325,11 @@ p {
     flex-wrap: wrap;
     align-items: center;
     gap: 48px 24px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-link{
     width: calc((100% - 48px) / 3);  
-    box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .portfolio-foto{
     position: relative;
@@ -376,6 +386,7 @@ p {
 }
 .footer-container{
     display: flex;
+    align-items: baseline;
 }
 .footer-text-container{
     margin-right: 120px;
@@ -413,11 +424,15 @@ p {
     display: flex;
     gap: 16px;
 }
+.footer-icon-item{
+    width: 40px;
+    height: 40px;
+}
 .footer-icon-links{
     background-color: var(--color-iris);
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
